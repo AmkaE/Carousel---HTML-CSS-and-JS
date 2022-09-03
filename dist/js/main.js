@@ -1,4 +1,4 @@
-// array of image from images folder
+// array of images from images folder
 const images = [
 	'./images/image-1.jpg',
 	'./images/image-2.jpg',
@@ -21,14 +21,14 @@ prevBtn.addEventListener('click', backToPrevSlide);
 nextBtn.addEventListener('click', goToNextSlide);
 carouselImage.src = images[indexPosition];
 
-//
+// based on the images array's length, create circle dots
 for (let i = 0; i < images.length; i++) {
 	const circleItem = document.createElement('div');
 	circleItem.classList.add('circle-item', i + 1);
 	circle.append(circleItem);
 }
 
-// add class of 'acitve' to based on index position
+// add class of 'acitve' to the circle dots based on index position
 circle.children[indexPosition].classList.add('active');
 
 // got to the next side image
@@ -48,7 +48,7 @@ function goToNextSlide() {
 		circleItem.classList.remove('active');
 	});
 
-	// add class of 'acitve' to based on index position
+	// add class of 'acitve' to the circle dots based on index position
 	circle.children[indexPosition].classList.add('active');
 }
 
@@ -69,7 +69,7 @@ function backToPrevSlide() {
 		circleItem.classList.remove('active');
 	});
 
-	// add class of 'acitve' to based on index position
+	// add class of 'acitve' to the circle dots based on index position
 	circle.children[indexPosition].classList.add('active');
 }
 
